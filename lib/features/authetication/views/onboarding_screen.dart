@@ -1,10 +1,82 @@
+import 'package:fact200/features/authetication/views/create_account_screen.dart';
+import 'package:fact200/gen/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:fact200/widgets/buttons.dart';
 
 class OnboardingScreen extends StatelessWidget {
-  const OnboardingScreen({super.key});
+  const OnboardingScreen({required this.title, super.key});
+
+  final String title;
+  static const String routeName = '/onboarding';
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+    backgroundColor: Colors.black,
+    body: Padding(
+      padding: EdgeInsets.symmetric(horizontal: 25),
+      child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+      Image.asset(
+        AppAssets.ASSETS_IMAGES_ONBOARDING_PNG,
+      height: 323, 
+      width: 328,
+      ),
+      SizedBox(height: 64),
+       Text(
+              title,
+              style: TextStyle(
+                fontFamily: 'roboto',
+                fontSize: 20,
+                height: 1,
+                fontWeight: FontWeight.w600,
+                color: Color(0xffE8F9FC),
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 16),
+      Text(
+              'Your guide to verifying news and uncovering the truth',
+              style: TextStyle(
+                fontFamily: 'roboto',
+                fontSize: 16,
+                height: 1,
+                fontWeight: FontWeight.w400,
+                color: Color(0xffCCCCCC),
+              ),
+              textAlign: TextAlign.center,
+            ),
+        SizedBox(height: 40),
+         GeneralButton(
+              buttonText: 'Create an account',
+              backgroundColor: Color(0xff1BB0CE),
+              textColor: Colors.black,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return CreateAccountScreen();
+                    },
+                  ),
+                );
+              },
+            ),
+
+            SizedBox(height: 20),
+
+            GeneralButton(
+              buttonText: 'Login',
+              backgroundColor: Colors.black,
+              textColor: Color(0xff1BB0CE),
+              onPressed: () {
+               Navigator.pop(context, 'Elevate your knowledge with FACT100');
+            },
+          ),
+        ],
+       ),
+    ),
+    );
   }
 }

@@ -7,4 +7,8 @@ class AppAssets {
   /// ![preview](file://C:\Users\HP\Desktop\New folder (2)\fact200\assets\images\Geography.png)
   static const String ASSETS_IMAGES_GEOGRAPHY_PNG =
       'assets/images/Geography.png';
+
+  /// ![preview](file://C:\Users\HP\Desktop\New folder (2)\fact200\assets\images\onboarding.png)
+  static const String ASSETS_IMAGES_ONBOARDING_PNG =
+      'assets/images/onboarding.png';
 }

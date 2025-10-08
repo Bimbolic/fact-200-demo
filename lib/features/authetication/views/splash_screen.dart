@@ -1,4 +1,3 @@
-//import 'package:flutter/cupertino.dart';
 import 'package:fact200/gen/assets.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +26,7 @@ class SplashScreen extends StatelessWidget {
             ),
             SizedBox(height: 12),
             Text(
-              'FACT100',
+              'FACT200',
               style: TextStyle(
                 fontFamily: 'rockwell',
                 fontSize: 34,

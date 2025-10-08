@@ -62,7 +62,7 @@ flutter:
          - asset: fonts\rock.ttf
          - asset: fonts\Rockwell-Bold.ttf
 
-         - family: roboto
+     - family: roboto
        fonts:
          - asset: fonts\Roboto-Regular.ttf
         
